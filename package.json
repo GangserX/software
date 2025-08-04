@@ -1,0 +1,51 @@
+{
+  "name": "software",
+  "productName": "software",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "BISHAL PRITAM CHOWDHURY",
+    "email": "bishalpvtxd@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "lucide-react": "^0.536.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@electron-forge/cli": "^7.8.2",
+    "@electron-forge/maker-deb": "^7.8.2",
+    "@electron-forge/maker-rpm": "^7.8.2",
+    "@electron-forge/maker-squirrel": "^7.8.2",
+    "@electron-forge/maker-zip": "^7.8.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.2",
+    "@electron-forge/plugin-fuses": "^7.8.2",
+    "@electron/fuses": "^2.0.0",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "electron": "37.2.5",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

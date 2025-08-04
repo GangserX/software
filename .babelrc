@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "electron": "37.2.5"
+      }
+    }],
+    ["@babel/preset-react", {
+      "runtime": "automatic"
+    }]
+  ]
+}
