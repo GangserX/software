@@ -135,14 +135,14 @@ const LibraryView = ({ playlist, onTrackPlay, currentTrack }) => {
 
   const getFilteredTracks = () => {
     let filtered = [...playlist];
-    
+
     // Apply filters
     if (activeFilter !== 'all') {
       // For demo purposes, just return all tracks
       // In a real app, you'd filter based on the actual criteria
       filtered = playlist;
     }
-    
+
     // Apply sorting
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -158,7 +158,7 @@ const LibraryView = ({ playlist, onTrackPlay, currentTrack }) => {
           return 0;
       }
     });
-    
+
     return filtered;
   };
 
@@ -169,7 +169,7 @@ const LibraryView = ({ playlist, onTrackPlay, currentTrack }) => {
   const formatTotalDuration = (totalSeconds) => {
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
-    
+
     if (hours > 0) {
       return `${hours}h ${minutes}m`;
     }
@@ -189,26 +189,26 @@ const LibraryView = ({ playlist, onTrackPlay, currentTrack }) => {
           <h1>Your Library</h1>
           <p>{playlist.length} songs • {formatTotalDuration(getTotalDuration())}</p>
         </HeaderLeft>
-        
+
         <HeaderRight>
-          <FilterButton onClick={() => {}}>
+          <FilterButton onClick={() => { }}>
             <Filter size={16} />
             Filter
           </FilterButton>
-          
-          <FilterButton onClick={() => {}}>
+
+          <FilterButton onClick={() => { }}>
             <SortAsc size={16} />
             Sort
           </FilterButton>
-          
+
           <ViewToggle>
-            <ViewButton 
+            <ViewButton
               active={viewMode === 'list'}
               onClick={() => setViewMode('list')}
             >
               <List size={16} />
             </ViewButton>
-            <ViewButton 
+            <ViewButton
               active={viewMode === 'grid'}
               onClick={() => setViewMode('grid')}
             >
@@ -250,7 +250,7 @@ const LibraryView = ({ playlist, onTrackPlay, currentTrack }) => {
       </FilterSection>
 
       <LibraryContent>
-        <TrackList 
+        <TrackList
           tracks={filteredTracks}
           onTrackPlay={onTrackPlay}
           currentTrack={currentTrack}

@@ -168,7 +168,7 @@ const HomeView = ({ playlist, onTrackPlay, currentTrack }) => {
           {Object.values(albums).map((album, index) => (
             <AlbumCard key={index}>
               <AlbumArt>
-                <PlayButton 
+                <PlayButton
                   className="play-button"
                   playing={currentTrack?.album === album.album}
                   onClick={() => onTrackPlay(album.tracks[0], index)}
@@ -187,7 +187,7 @@ const HomeView = ({ playlist, onTrackPlay, currentTrack }) => {
 
       <Section>
         <SectionTitle>Your Music</SectionTitle>
-        <TrackList 
+        <TrackList
           tracks={playlist}
           onTrackPlay={onTrackPlay}
           currentTrack={currentTrack}

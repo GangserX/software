@@ -122,7 +122,7 @@ const Sidebar = ({ activeView, setActiveView }) => {
         <Music />
         Spotify Clone
       </Logo>
-      
+
       <NavSection>
         {navItems.map(item => {
           const IconComponent = item.icon;
@@ -141,17 +141,17 @@ const Sidebar = ({ activeView, setActiveView }) => {
 
       <PlaylistSection>
         <SectionTitle>Playlists</SectionTitle>
-        
+
         <CreatePlaylistButton>
           <Plus />
           Create Playlist
         </CreatePlaylistButton>
-        
+
         <PlaylistItem>
           <Heart size={16} style={{ marginRight: '12px', display: 'inline' }} />
           Liked Songs
         </PlaylistItem>
-        
+
         {playlists.slice(1).map((playlist, index) => (
           <PlaylistItem key={index}>
             {playlist}

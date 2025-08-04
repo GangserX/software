@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { 
-  Play, 
-  Pause, 
-  SkipBack, 
-  SkipForward, 
-  Shuffle, 
-  Repeat, 
-  Volume2, 
+import {
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
+  Shuffle,
+  Repeat,
+  Volume2,
   VolumeX,
   Heart,
   PictureInPicture
@@ -320,7 +320,7 @@ const PlayerControlsComponent = ({
       {/* Player Controls */}
       <PlayerControls>
         <ControlButtons>
-          <IconButton 
+          <IconButton
             className={isShuffleOn ? 'active' : ''}
             onClick={() => setIsShuffleOn(!isShuffleOn)}
           >
@@ -335,14 +335,14 @@ const PlayerControlsComponent = ({
           <IconButton onClick={onNext}>
             <SkipForward size={16} />
           </IconButton>
-          <IconButton 
+          <IconButton
             className={repeatMode !== 'none' ? 'active' : ''}
             onClick={toggleRepeat}
           >
             <Repeat size={16} />
           </IconButton>
         </ControlButtons>
-        
+
         <ProgressSection>
           <TimeDisplay>{formatTime(currentTime)}</TimeDisplay>
           <ProgressBar onClick={handleProgressClick}>

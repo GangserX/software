@@ -16,7 +16,7 @@ const MainContent = ({ activeView, playlist, onTrackPlay, currentTrack }) => {
     switch (activeView) {
       case 'home':
         return (
-          <HomeView 
+          <HomeView
             playlist={playlist}
             onTrackPlay={onTrackPlay}
             currentTrack={currentTrack}
@@ -24,7 +24,7 @@ const MainContent = ({ activeView, playlist, onTrackPlay, currentTrack }) => {
         );
       case 'search':
         return (
-          <SearchView 
+          <SearchView
             playlist={playlist}
             onTrackPlay={onTrackPlay}
             currentTrack={currentTrack}
@@ -32,7 +32,7 @@ const MainContent = ({ activeView, playlist, onTrackPlay, currentTrack }) => {
         );
       case 'library':
         return (
-          <LibraryView 
+          <LibraryView
             playlist={playlist}
             onTrackPlay={onTrackPlay}
             currentTrack={currentTrack}
@@ -40,7 +40,7 @@ const MainContent = ({ activeView, playlist, onTrackPlay, currentTrack }) => {
         );
       default:
         return (
-          <HomeView 
+          <HomeView
             playlist={playlist}
             onTrackPlay={onTrackPlay}
             currentTrack={currentTrack}

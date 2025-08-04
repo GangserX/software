@@ -152,22 +152,22 @@ const TrackList = ({ tracks, onTrackPlay, currentTrack }) => {
         <span>Duration</span>
         <span></span>
       </TrackListHeader>
-      
+
       {tracks.map((track, index) => {
         const isPlaying = currentTrack?.id === track.id;
-        
+
         return (
-          <TrackRow 
-            key={track.id} 
+          <TrackRow
+            key={track.id}
             isPlaying={isPlaying}
             onClick={() => onTrackPlay(track, index)}
           >
             <div style={{ position: 'relative' }}>
               <TrackNumber className="track-number">
                 {isPlaying ? (
-                  <div style={{ 
-                    width: '12px', 
-                    height: '12px', 
+                  <div style={{
+                    width: '12px',
+                    height: '12px',
                     background: `linear-gradient(45deg, ${isPlaying ? '#1db954' : '#fff'} 0%, ${isPlaying ? '#1ed760' : '#fff'} 100%)`,
                     borderRadius: '2px',
                     margin: '0 auto'
@@ -180,20 +180,20 @@ const TrackList = ({ tracks, onTrackPlay, currentTrack }) => {
                 {isPlaying ? <Pause size={16} /> : <Play size={16} />}
               </PlayButtonCell>
             </div>
-            
+
             <TrackInfo isPlaying={isPlaying}>
               <div className="track-details">
                 <h4>{track.title}</h4>
                 <p>{track.artist}</p>
               </div>
             </TrackInfo>
-            
+
             <AlbumCell>{track.album}</AlbumCell>
-            
+
             <DurationCell>
               {formatDuration(track.duration)}
             </DurationCell>
-            
+
             <ActionsCell>
               <ActionButton>
                 <Heart size={16} />

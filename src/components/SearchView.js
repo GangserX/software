@@ -131,19 +131,19 @@ const SearchView = ({ playlist, onTrackPlay, currentTrack }) => {
 
   const handleSearch = (query) => {
     setSearchQuery(query);
-    
+
     if (query.trim() === '') {
       setSearchResults([]);
       return;
     }
-    
+
     // Filter tracks based on search query
     const results = playlist.filter(track =>
       track.title.toLowerCase().includes(query.toLowerCase()) ||
       track.artist.toLowerCase().includes(query.toLowerCase()) ||
       track.album.toLowerCase().includes(query.toLowerCase())
     );
-    
+
     setSearchResults(results);
   };
 
@@ -178,14 +178,14 @@ const SearchView = ({ playlist, onTrackPlay, currentTrack }) => {
       {searchQuery && (
         <ResultsSection>
           <ResultsTitle>
-            {searchResults.length > 0 
+            {searchResults.length > 0
               ? `Found ${searchResults.length} result${searchResults.length === 1 ? '' : 's'}`
               : 'No results found'
             }
           </ResultsTitle>
-          
+
           {searchResults.length > 0 ? (
-            <TrackList 
+            <TrackList
               tracks={searchResults}
               onTrackPlay={onTrackPlay}
               currentTrack={currentTrack}

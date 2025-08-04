@@ -30,7 +30,7 @@ const createWindow = () => {
   if (process.env.NODE_ENV === 'development') {
     mainWindow.webContents.openDevTools();
   }
-  
+
   // Set app title
   mainWindow.setTitle('Spotify Clone - Music Player');
 };

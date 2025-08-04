@@ -4,7 +4,7 @@ const { useState, useEffect, useRef } = React;
 // Simple styled components replacement
 const styled = (component) => (styles) => (props) => {
   const className = `styled-${Math.random().toString(36).substr(2, 9)}`;
-  
+
   // Inject styles
   if (!document.getElementById(className)) {
     const style = document.createElement('style');
@@ -12,7 +12,7 @@ const styled = (component) => (styles) => (props) => {
     style.textContent = `.${className} { ${styles} }`;
     document.head.appendChild(style);
   }
-  
+
   return React.createElement(component, {
     ...props,
     className: `${className} ${props.className || ''}`
@@ -27,7 +27,7 @@ const App = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [activeView, setActiveView] = useState('home');
-  
+
   const audioRef = useRef(null);
 
   // Sample tracks
@@ -43,7 +43,7 @@ const App = () => {
     {
       id: 2,
       title: "Demo Song",
-      artist: "Demo Artist", 
+      artist: "Demo Artist",
       album: "Demo Collection",
       duration: 210,
       src: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav", // Sample audio
@@ -170,7 +170,7 @@ const App = () => {
           key: 'content-title',
           style: { marginBottom: '20px' }
         }, activeView === 'home' ? 'Featured Music' : 'Your Library'),
-        
+
         // Track List
         React.createElement('div', {
           key: 'track-list',
@@ -179,7 +179,7 @@ const App = () => {
             borderRadius: '8px',
             padding: '20px'
           }
-        }, sampleTracks.map((track, index) => 
+        }, sampleTracks.map((track, index) =>
           React.createElement('div', {
             key: track.id,
             style: {

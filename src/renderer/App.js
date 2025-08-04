@@ -29,7 +29,7 @@ const App = () => {
   const [playlist, setPlaylist] = useState([]);
   const [currentPlaylistIndex, setCurrentPlaylistIndex] = useState(0);
   const [activeView, setActiveView] = useState('home');
-  
+
   const audioRef = useRef(null);
 
   // Sample tracks - In a real app, this would come from file system scanning
@@ -102,11 +102,11 @@ const App = () => {
     <ThemeProvider theme={darkTheme}>
       <AppContainer>
         <MainLayout>
-          <Sidebar 
+          <Sidebar
             activeView={activeView}
             setActiveView={setActiveView}
           />
-          <MainContent 
+          <MainContent
             activeView={activeView}
             playlist={playlist}
             onTrackPlay={playTrack}
